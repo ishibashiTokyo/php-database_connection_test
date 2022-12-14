@@ -32,6 +32,7 @@ try {
 
 $sth = $connection->query('SHOW GRANTS');
 
-foreach ($stm->fetchAll() as $row) {
-    echo $row . PHP_EOL;
+foreach ($sth->fetchAll() as $row) {
+    var_dump($row);
+    echo PHP_EOL;
 }
